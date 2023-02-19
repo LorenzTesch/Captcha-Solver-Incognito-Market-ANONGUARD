@@ -1,7 +1,6 @@
 /* This value might need some tweaking. The pixels of the 2 images, do not share the exact color values. When they are compared later on, we must account for some varience. */
 const allowedVariance = 50;
 
-/*  */
 const inpSlider = document.querySelector('input[type=range]');
 
 const sliderMin = parseInt(inpSlider.min);
@@ -12,8 +11,8 @@ const offsetTop = parseInt(window.getComputedStyle(inpSlider).getPropertyValue('
 const imgCaptcha = new Image();
 const imgSlider = new Image();
 
-const resolveCaptcha = undefined;
-const resolveSlider = undefined;
+var resolveCaptcha = undefined;
+var resolveSlider = undefined;
 
 var waitForLoad = Promise.all([
     new Promise((_res) => { resolveCaptcha = _res; }),
